@@ -28,26 +28,31 @@ public class JwtAuthTokenFilter extends OncePerRequestFilter {
 
 	private static final Logger logger = LoggerFactory.getLogger(JwtAuthTokenFilter.class);
 
+	// there we checking request for valid token and set authentication if it is ok
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
 			throws ServletException, IOException {
 		try {
 
+			// get token from the request
 			String jwt = getJwt(request);
+			// check it is not null and validate
 			if (jwt != null && tokenProvider.validateJwtToken(jwt)) {
+				// getting username from token
 				String username = tokenProvider.getUserNameFromJwtToken(jwt);
-
+				// getting principle from DB by username
 				UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+				//create authentication object with user information inside
 				UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
 						userDetails, null, userDetails.getAuthorities());
 				authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-
+				// set the authentication object into Security Context for the current user
 				SecurityContextHolder.getContext().setAuthentication(authentication);
 			}
 		} catch (Exception e) {
 			logger.error("Can NOT set user authentication -> Message: {}", e);
 		}
-
+		// after all we call to filters for response
 		filterChain.doFilter(request, response);
 	}
 

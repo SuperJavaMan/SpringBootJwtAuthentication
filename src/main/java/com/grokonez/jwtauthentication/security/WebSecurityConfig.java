@@ -52,7 +52,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-    
+
+    //add permissed way to the service ("/api/auth/**") and close any other ways
+    //add filter used for handling a http requests and checking user's permitions
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable().

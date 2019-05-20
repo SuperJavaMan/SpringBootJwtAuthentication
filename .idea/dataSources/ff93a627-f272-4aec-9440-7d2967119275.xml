@@ -1483,98 +1483,88 @@ role_id</ColNames>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="357" parent="294" name="age">
+    <column id="357" parent="294" name="email">
       <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="358" parent="294" name="city">
+    <column id="358" parent="294" name="name">
       <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="359" parent="294" name="name">
+    <column id="359" parent="294" name="password">
       <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="360" parent="294" name="email">
+    <column id="360" parent="294" name="username">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="361" parent="294" name="password">
-      <Position>6</Position>
-      <DataType>varchar(100)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="362" parent="294" name="username">
-      <Position>7</Position>
-      <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="363" parent="294" name="UK6dotkott2kjsp8vw4d0m25fb7">
+    <index id="361" parent="294" name="UK6dotkott2kjsp8vw4d0m25fb7">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="364" parent="294" name="UKr43af9ap4edm43mmtq01oddj6">
+    <index id="362" parent="294" name="UKr43af9ap4edm43mmtq01oddj6">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="365" parent="294" name="PRIMARY">
+    <key id="363" parent="294" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="366" parent="294" name="UK6dotkott2kjsp8vw4d0m25fb7">
+    <key id="364" parent="294" name="UK6dotkott2kjsp8vw4d0m25fb7">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>UK6dotkott2kjsp8vw4d0m25fb7</UnderlyingIndexName>
     </key>
-    <key id="367" parent="294" name="UKr43af9ap4edm43mmtq01oddj6">
+    <key id="365" parent="294" name="UKr43af9ap4edm43mmtq01oddj6">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>UKr43af9ap4edm43mmtq01oddj6</UnderlyingIndexName>
     </key>
-    <column id="368" parent="295" name="date">
+    <column id="366" parent="295" name="date">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="369" parent="295" name="description">
+    <column id="367" parent="295" name="description">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="370" parent="295" name="humidity">
+    <column id="368" parent="295" name="humidity">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="371" parent="295" name="pressure">
+    <column id="369" parent="295" name="pressure">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="372" parent="295" name="temperature_day">
+    <column id="370" parent="295" name="temperature_day">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="373" parent="295" name="temperature_night">
+    <column id="371" parent="295" name="temperature_night">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="374" parent="295" name="wind">
+    <column id="372" parent="295" name="wind">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="375" parent="295" name="PRIMARY">
+    <key id="373" parent="295" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>date</ColNames>
       <Primary>1</Primary>

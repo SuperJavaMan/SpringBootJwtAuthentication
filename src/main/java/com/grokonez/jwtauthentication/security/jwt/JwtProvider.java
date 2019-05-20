@@ -21,11 +21,12 @@ public class JwtProvider {
 
     @Value("${grokonez.app.jwtExpiration}")
     private int jwtExpiration;
-
+    // generates token for authenticated user
     public String generateJwtToken(Authentication authentication) {
-
+        // get principal from authentication object
         UserPrinciple userPrincipal = (UserPrinciple) authentication.getPrincipal();
-
+        // creates token using username, set expiration time for the token
+        // and SignatureAlgorithm with a secret sequence
         return Jwts.builder()
 		                .setSubject((userPrincipal.getUsername()))
 		                .setIssuedAt(new Date())
@@ -33,7 +34,7 @@ public class JwtProvider {
 		                .signWith(SignatureAlgorithm.HS512, jwtSecret)
 		                .compact();
     }
-    
+    // validate a token and return true if it is ok or throw an exception
     public boolean validateJwtToken(String authToken) {
         try {
             Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(authToken);
