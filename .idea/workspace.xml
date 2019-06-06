@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f1b6940d-d64f-44a9-8e24-bbb2ecc86d02" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/grokonez/jwtauthentication/controller/AuthRestAPIs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/grokonez/jwtauthentication/controller/AuthRestAPIs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/grokonez/jwtauthentication/controller/NoteRestAPIs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/grokonez/jwtauthentication/controller/NoteRestAPIs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/grokonez/jwtauthentication/controller/TestRestAPIs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/grokonez/jwtauthentication/controller/TestRestAPIs.java" afterDir="false" />
-    </list>
+    <list default="true" id="f1b6940d-d64f-44a9-8e24-bbb2ecc86d02" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -307,7 +303,7 @@
       <workItem from="1559567270984" duration="10900000" />
       <workItem from="1559648667862" duration="5539000" />
       <workItem from="1559665794266" duration="182000" />
-      <workItem from="1559809939716" duration="1704000" />
+      <workItem from="1559809939716" duration="2300000" />
     </task>
     <task id="LOCAL-00001" summary="20.05.19">
       <created>1558373278934</created>
@@ -327,7 +323,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72914000" />
+    <option name="totallyTimeSpent" value="73510000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -339,7 +335,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
+    <frame x="-4" y="-4" width="1374" height="732" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33006042" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
