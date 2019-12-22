@@ -24,6 +24,7 @@ import com.grokonez.jwtauthentication.security.services.UserDetailsServiceImpl;
 		prePostEnabled = true
 )
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
     @Autowired
     UserDetailsServiceImpl userDetailsService;
 
@@ -57,8 +58,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     //add filter used for handling a http requests and checking user's permitions
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.cors().and().csrf().disable().
-                authorizeRequests()
+        http.cors().and().csrf().disable()
+                .authorizeRequests()
                 .antMatchers("/api/auth/**").permitAll()
                 .anyRequest().authenticated()
                 .and()

@@ -30,8 +30,10 @@ public class JwtAuthTokenFilter extends OncePerRequestFilter {
 
 	// there we checking request for valid token and set authentication if it is ok
 	@Override
-	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
-			throws ServletException, IOException {
+	protected void doFilterInternal(HttpServletRequest request,
+									HttpServletResponse response,
+									FilterChain filterChain)
+										throws ServletException, IOException {
 		try {
 
 			// get token from the request
