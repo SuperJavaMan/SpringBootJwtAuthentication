@@ -3,16 +3,7 @@ package com.grokonez.jwtauthentication.model;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -53,9 +44,17 @@ public class User{
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "user_roles", 
-    	joinColumns = @JoinColumn(name = "user_id"), 
-    	inverseJoinColumns = @JoinColumn(name = "role_id"))
+                joinColumns = @JoinColumn(name = "user_id"),
+                inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
+
+    @ManyToMany(fetch = FetchType.LAZY,
+            cascade = { CascadeType.PERSIST,
+                        CascadeType.MERGE })
+    @JoinTable(name = "usefulNotes",
+                joinColumns = @JoinColumn(name = "user_id"),
+                inverseJoinColumns = @JoinColumn(name = "note_id"))
+    private Set<Note> usefulNotes = new HashSet<>();
 
     public User() {}
 
@@ -112,5 +111,13 @@ public class User{
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public Set<Note> getUsefulNotes() {
+        return usefulNotes;
+    }
+
+    public void setUsefulNotes(Set<Note> usefulNotes) {
+        this.usefulNotes = usefulNotes;
     }
 }

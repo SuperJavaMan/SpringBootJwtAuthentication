@@ -9,7 +9,7 @@
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <introspection-schemas>*:@</introspection-schemas>
+      <introspection-schemas>*:@,notesdb</introspection-schemas>
     </data-source>
     <data-source name="RemoteMysqlNotes" uuid="37ae52ef-f2c4-4ad3-89b5-8ab0e734037f">
       <database-info product="MySQL" version="8.0.13-4" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.47 ( Revision: fe1903b1ecb4a96a917f7ed3190d80c049b1de29 )" dbms="MYSQL" exact-version="8.0.13">
