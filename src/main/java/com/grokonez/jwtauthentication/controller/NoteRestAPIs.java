@@ -9,13 +9,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import javax.validation.Valid;
 
-<<<<<<< HEAD
 import java.util.Arrays;
 import java.util.List;
-=======
-import javax.validation.Valid;
->>>>>>> origin/master
 
 @CrossOrigin
 @RestController
